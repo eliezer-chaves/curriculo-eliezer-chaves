@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Currículo Eliezer Chaves</title>
+    
+    <!--Folha Bootstrap-->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous"
+    />
+    <!--Folha CSS-->
+    <link rel="stylesheet" href="index.css"/>
+    <link rel="shortcut icon" href="lib/marca.svg">
+</head>
+<body>
+    <div id="header" class="header">
+        <div>
+            <!-- Colocar link para o web portifólio -->
+            <a href="#" id="marca" class="navbar-brand">
+                <img src="lib/marca.svg" alt="">
+            </a>
+        </div>
+
+        <!-- Menu flutuante -->
+        <div class="dropdown">
+            <img id="menu-icon" src="lib/gridicon.svg" alt="" onclick="myFunction()" class="dropbtn">
+            <div id="myDropdown" class="dropdown-content">
+                <a onclick="return scrollToHome()">Home</a>
+                <a onclick="return scrollToAbout()">Sobre</a>
+                <a onclick="return scrollToExperiencia()">Experiência</a>
+                <a onclick="return scrollToFormacao()">Formação</a>
+                <a onclick="return scrollToContato()">Contato</a>
+            </div>
+          </div>
+
+        <div class="lista">
+            <ul class="nav ">
+                <li class="nav-item">
+                    <a class="nav-link" onclick="scrollToHome()">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="scrollToAbout()">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="scrollToExperiencia()">Experiência</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="scrollToFormacao()">Formação</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="scrollToContato()">Contato</a>
+                </li>
+            </ul>
+        </div>                
+    </div>
+
+    <div id="hero" class="container-fluid ">
+        <h3 id="cv" class="pt-5 mt-5">Currículo</h3>
+        <h1 id="name" class="text-center">Eliézer Chaves</h1>
+        <button id="btn-about" class="btn" onmouseenter="mudaArrowToBlack()" onmouseleave="mudaArrowToWhite()" onclick="scrollToAbout()" onfocus="mudaArrowToWhite()">Sobre mim 
+            <span > <img id="arrow" class="arrow" src="lib/arrowWhite.svg" alt=""></span>    
+        </button>
+
+    </div>
+
+    <div id="about" class="container-fluid">
+        <h1 class="section-title text-center">Sobre</h1>
+
+        <div id="description" class="description container w-75">
+            <div class="text-discription">
+                <p id="description-text" class="description">
+                    Cursando o Técnico em Eletroeletrônica pelo SENAI de Pindamonhangaba, formado em Análise e Desenvolvimento de Sistemas pela FATEC Taubaté com Trabalho de Graduação voltado para área de desenvolvimento WEB, conhecimentos em mecânica oriundos de formação no SENAI Taubaté. Atuei no setor de manutenção pneumática e hoje exerço funções administrativas no Exército. Estou disposto a desafios que envolvam melhoria de processos, também estou buscando aperfeiçoamento profissional e desenvolvimento pessoal.
+                </p>
+            </div>
+        </div>
+
+        <div id="information" class="row container w-75">
+            <div id="dados" class="col ">
+                <div>
+                    <h3 class="text-center">Dados</h3>
+                </div>
+                <div class="list-dados">
+                    <h5 class="grey-font">Nome:</h5>
+                    <p>Eliézer Leite Chaves</p>
+                    <h5 class="grey-font">Nascimento:</h5>
+                    <p>27 de janeiro de 1999</p>
+                    <h5 class="grey-font">Residência:</h5>
+                    <p> <a href="https://goo.gl/maps/Hax8bdW45N7erene7" target="_blank" onfocus="linkBranco()" id="link-taubate">
+                        Taubaté - SP <span><img id="map" src="lib/map.svg" alt=""></span>
+                    </a> </p>
+                        
+                </div>
+            </div>
+            <div id="competencias" class="col">
+                <h3 class="text-center">Competências</h3>
+                <div class="list-competencia">
+                    <p>
+                        - Office Windows
+                    </p>
+                    <p>
+                        - LibreOffice Linux
+                    </p>
+                    <p>
+                        - AutoCAD / Inventor
+                    </p>
+                    <p>
+                        - Figma Design
+                    </p>
+                    <p>
+                        - Inglês intermediário
+                    </p>
+                    <p>
+                        - Linguagens de Programação: PHP, Javascript, HTML e CSS, Bootstrap, Python e C.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="botoes w-75">
+            <div>
+                <button id="button-contato" class="btn button-style" onclick="scrollToContato()">ENTRE EM CONTATO</button>
+            </div>
+            <div>
+                <a href="Currículo Eliézer Chaves.pdf" class="btn button-style" 
+                    id="download-cv"
+                    download="Currículo Eliézer Chaves.pdf">CURRÍCULO PDF</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="experiencia" class="cont ainer-fluid">
+        <h1 class="section-title text-center">Experiência</h3>
+        <div class="box-experiencia">
+            <div class="card-experiencia">
+                <img class=" img-fluid" src="lib/ciavex.png" alt="Centro de Instrução de Aviação do Exército">
+
+                <h4 class="card-titulo">
+                    Auxiliar Administrativo
+                </h4>
+                <p class="card-periodo">desde março de 2018</p>
+                <a class="card-instituicao" href="http://www.ciavex.eb.mil.br/" target="_blank">Centro de Instrução de Aviação do Exército, Taubaté - SP</a>
+                <p class="card-descricao text-center">
+                    Como Cabo, exerço funções administrativas voltadas para os recursos humanos do CIAvEx, entre outras atribuições na Seção de Pessoal da organização de ensino. Somado à minha especialização como Cabo Auxiliar de Transporte Aéreo, desenvolvo habilidades de liderança no ambiente da aviação do Exército.
+                </p>
+            </div>
+            <div class="card-experiencia">
+                <img class="img-fluid" id="plastic-logo" src="lib/plastic.png" alt="Plastic Omnium">
+
+                <h4 class="card-titulo">
+                    Aprendiz de Manutenção
+                </h4>
+                <p class="card-periodo">janeiro de 2016 - dezembro de 2017</p>
+                <a class="card-instituicao" href="https://www.plasticomnium.com/en/" target="_blank">Plastic Omnium, Taubaté - SP</a>
+                <p class="card-descricao text-center">
+                    Atuei na área de manutenção, onde realizei manutenções corretivas e preventivas nas garras pneumáticas do setor, também exerci na melhoria e organização do setor de injeção plástica da empresa.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="formacao" class="container-fluid">
+        <h1 class="section-title text-center">Formação Acadêmica</h1>
+        <div class="" id="box-formacao">
+            <div class="card-formacao d-flex align-items-center text-center">
+                <img src="lib/CPU_light.svg" class="icone-formacao" alt="" style="width: 80px; height: auto; max-width: 100%;">
+                
+                <h3 class="titulo-formacao">
+                    Eletroeletrônica
+                </h3>
+                <h6 class="lugar-formacao">
+                    <a href="https://pindamonhangaba.sp.senai.br/" target="_blank">
+                        SENAI - Pindamonhangaba-SP
+                    </a>
+                </h6>
+                <p class="perido-formacao">
+                    Desde janeiro de 2023
+                </p>
+                <h3 class="nivel-formacao">
+                    Nível Técnico
+                </h3>
+            </div>
+            
+            <div class="card-formacao d-flex align-items-center  text-center">
+                <img src="lib/monitor.svg" class="icone-formacao" alt="">
+                <h3 class="titulo-formacao">
+                    Análise e Desenvolvimento de Sistema
+                </h3>
+                <h6 class="lugar-formacao">
+                    <a href="https://fatectaubate.edu.br/index.php" target="_blank">
+                        FATEC - Taubaté-SP
+                    </a>  
+                        
+                </h6>
+                <p class="perido-formacao">
+                    janeiro de 2020 - dezembro de 2022
+                </p>
+                <h3 class="nivel-formacao">
+                    Nível Superior
+                </h3>
+            </div>
+            <div class="card-formacao d-flex align-items-center text-center">
+                <img src="lib/helicoptero.svg" class="icone-formacao" alt=""  style="width: 80px; height: auto; max-width: 100%;">
+                <h3 class="titulo-formacao">
+                    Auxiliar de Transporte Aéreo e Suprimento de Aviação
+                </h3>
+                <h6 class="lugar-formacao">
+                    <a href="https://www.eb.mil.br/o-exercito?p_p_id=101&p_p_lifecycle=0&p_p_state=maximized&p_p_mode=view&_101_struts_action=%2Fasset_publisher%2Fview_content&_101_assetEntryId=1942581&_101_type=content&_101_groupId=11425&_101_urlTitle=batalhao-de-manutencao-e-suprimento-de-aviacao-do-exercito-visita&inheritRedirect=true" target="_blank">
+                        Batalhão de Manutenção e Suprimento de Aviação do Exército 
+                    </a>
+                    
+                </h6>
+                <p class="perido-formacao">
+                    junho de 2021 - agosto de 2021
+                </p>
+                <h3 class="nivel-formacao">
+                    Especialização
+                </h3>
+            </div>
+            <div class="card-formacao d-flex align-items-center text-center">
+                <img src="lib/factory.svg" class="icone-formacao" alt="">
+                <h3 class="titulo-formacao">
+                    Mecânica de Usinagem
+                </h3>
+                <h6 class="lugar-formacao">
+                    <a href="https://taubate.sp.senai.br/" target="_blank">
+                        SENAI - Taubaté-SP
+                    </a>
+                    
+                </h6>
+                <p class="perido-formacao">
+                    janeiro de 2016 - dezembro de 2017
+                </p>
+                <h3 class="nivel-formacao">
+                    Nível Profissionalizante
+                </h3>
+            </div>
+            <div class="card-formacao d-flex align-items-center text-center">
+                <img src="lib/chave.svg" class="icone-formacao" alt="">
+                <h3 class="titulo-formacao">
+                    Ferramentaria de Corte, Dobra e Repuxo
+                </h3>
+                <h6 class="lugar-formacao">
+                    <a href="https://taubate.sp.senai.br/" target="_blank">
+                        SENAI - Taubaté-SP
+                    </a>
+                    
+                </h6>
+                <p class="perido-formacao">
+                    janeiro de 2014 - dezembro de 2015
+                </p>
+                <h3 class="nivel-formacao">
+                    Nível Profissionalizante
+                </h3>
+            </div>
+        </div>
+    </div>
+    <div id="contato" class="container-fluid">
+        <h1 class="section-title text-center">Contato</h1>
+        <h5 class="subtitle text-center">
+            Entre em contato pelas redes sociais:
+        </h5>
+        <div class="box-contatos">
+            <div class="card-contato">
+                <a href="https://www.linkedin.com/in/eli%C3%A9zer-chaves-1171281a5" target="_blank">
+                    <img class="img-contato" src="lib/linkedin.svg" alt="">
+                </a>
+                
+                <p class="title-contato">
+                    LinkedIn
+                </p>
+            </div>
+            <div class="card-contato">
+                <a href="mailto:chaves.eliezer@outlook.com?subject=Currículo Digital" target="_blank">
+                    <img class="img-contato" src="lib/email.svg" alt="">
+                </a>
+                
+                <p class="title-contato">
+                    Email
+                </p>
+            </div>
+            <div class="card-contato">
+                <a href="https://api.whatsapp.com/send?phone=5512992156300&text=Ol%C3%A1%2C%20vim%20pelo%20curr%C3%ADculo%20no%20seu%20site%2C%20podemos%20conversar%3F" target="_blank">
+                    <img class="img-contato" src="lib/wpp.svg" alt="">
+                </a>
+                <p class="title-contato">
+                    WhatsApp
+                </p>
+            </div>
+            <div class="card-contato">
+                <a href="https://github.com/eliezer-chaves" target="_blank">
+                    <img class="img-contato" src="lib/github.svg" alt="">
+                </a>
+                <p class="title-contato">
+                    GitHub
+                </p>
+            </div>
+        </div>
+       
+    </div>
+    <div id="footer" class="footer">
+        <p>
+            Feito e criado por Eliézer chaves
+        </p>
+        <a href="#">
+            <img src="lib/marca.svg" alt="">
+        </a>
+        
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
